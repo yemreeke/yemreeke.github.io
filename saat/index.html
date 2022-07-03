@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<script>
+ function Basamak(sayi) {
+    if(sayi/10<1){
+        return String(0)+String(sayi);
+    }
+    return String(sayi);
+ }
+ function Saat(indis){
+	let date = new Date();
+	return Basamak(date.getHours())[indis-1];
+ }
+ function Dakika(indis){
+	let date = new Date();
+    return Basamak(date.getMinutes())[indis-1];
+ }
+
+</script>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Saat</title>
+        <link rel="stylesheet" href="saat.css">
+        <link rel="icon" type="image/x-icon" href="../assets/img/favi.ico" />
+       
+    </head>
+    <body>
+        <div class="container">
+            <div class="text" style="--j:0;">
+                <span id="a1" style="--i:0"><script>document.getElementById("a1").innerHTML = Saat(1);</script></span>
+                <span id="b1" style="--i:1"><script>document.getElementById("b1").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="c1" style="--i:2"><script>document.getElementById("c1").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="d1" style="--i:3"><script>document.getElementById("d1").innerHTML = Math.floor(Math.random() * 10);</script></span>
+            </div>
+          	<div class="text" style="--j:1;">
+                <span id="a2" style="--i:0"><script>document.getElementById("a2").innerHTML = Saat(2);</script></span>
+                <span id="b2" style="--i:1"><script>document.getElementById("b2").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="c2" style="--i:2"><script>document.getElementById("c2").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="d2" style="--i:3"><script>document.getElementById("d2").innerHTML = Math.floor(Math.random() * 10);</script></span>
+            </div>
+            <div class="text" style="--j:2;">
+                <span style="--i:0">:</span>
+                <span style="--i:1">:</span>
+                <span style="--i:2">:</span>
+                <span style="--i:3">:</span>
+            </div>
+            <div class="text" style="--j:3;">
+                <span id="a3" style="--i:0"><script>document.getElementById("a3").innerHTML = Dakika(1);</script></span>
+                <span id="b3" style="--i:1"><script>document.getElementById("b3").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="c3" style="--i:2"><script>document.getElementById("c3").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="d3" style="--i:3"><script>document.getElementById("d3").innerHTML = Math.floor(Math.random() * 10);</script></span>
+            </div>
+          	<div class="text" style="--j:4;">
+                <span id="a4" style="--i:0"><script>document.getElementById("a4").innerHTML = Dakika(2);</script></span>
+                <span id="b4" style="--i:1"><script>document.getElementById("b4").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="c4" style="--i:2"><script>document.getElementById("c4").innerHTML = Math.floor(Math.random() * 10);</script></span>
+                <span id="d4" style="--i:3"><script>document.getElementById("d4").innerHTML = Math.floor(Math.random() * 10);</script></span>
+            </div>
+           
+        </div>
+    </body>
+
+
+
+</html>

@@ -1,0 +1,130 @@
+@import url('https ://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box ;
+    font-family : 'Oswald ', sans-serif;
+}
+body
+{
+    display : flex;
+    justify-content : center;
+    align-items :center;
+    min-height : 100vh;
+    background:#3d3d3d;
+}
+.container
+{
+    display: flex;
+    transform-style: preserve-3d;
+    gap:15px;
+    transform: rotateY(30deg) rotateX(10deg) scale(1.5);
+}
+.container .text
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: 2.5s ease-in-out;
+    transition-delay: calc(0.01s * var(--j));
+    font-size:15px;
+    font-weight: bold;
+
+}
+.container .text:nth-child(3)
+{
+    font-weight: bold;
+    font-size:18px;
+
+
+}
+
+.container:hover .text:nth-child(1)
+{
+    transform:rotateX(360deg);
+}
+.container:hover .text:nth-child(2)
+{
+    transform:rotateX(720deg);
+}
+.container:hover .text:nth-child(3)
+{
+    transform:rotateX(1080deg);
+}
+.container:hover .text:nth-child(4)
+{
+    transform:rotateX(1440deg);
+}
+.container:hover .text:nth-child(5)
+{
+    transform:rotateX(1800deg);
+}
+.container .text::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #373737;
+    transform-origin: left;
+    transform: rotateY(90deg) translateX(-50px);
+}
+.container .text:nth-child(1):before
+{
+    background: rgb(1, 159, 194);
+}
+.container .text:nth-child(2):before
+{
+    background: rgb(1, 159, 194);
+}
+.container .text:nth-child(3):before
+{
+    background: rgb(211, 0, 0);
+}
+.container .text:nth-child(4):before
+{
+    background: rgb(197, 95, 0);
+}
+.container .text:nth-child(5):before
+{
+    background: rgb(197, 95, 0);
+}
+
+.container .text span
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#434343,#535353);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color:#fff;
+    transform-style: preserve-3d;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+.container .text:nth-child(1) span
+{
+    background: linear-gradient(rgb(0, 208, 255),rgb(0, 208, 255));
+}
+.container .text:nth-child(2) span
+{
+    background: linear-gradient(rgb(0, 208, 255),rgb(0, 208, 255));
+}
+.container .text:nth-child(3) span
+{
+    background: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
+}
+.container .text:nth-child(4) span
+{
+    background: linear-gradient(rgb(255, 123, 0),rgb(255, 123, 0));
+}
+.container .text:nth-child(5) span
+{
+    background: linear-gradient(rgb(255, 123, 0),rgb(255, 123, 0));
+}
